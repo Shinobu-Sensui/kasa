@@ -1,0 +1,88 @@
+@import "./variables";
+
+/* Root and Body Styles */
+:root {
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: $font-primary;
+    font-size: $font-size-base;
+    line-height: 1.5;
+    font-weight: 500;
+}
+
+body > div {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    gap: 2.375rem;
+    padding-block-start: 2.375rem;
+    min-height: calc(100vh - 2.375rem);
+    min-height: calc(100svh - 2.375rem);
+}
+
+/* Heading Styles */
+h1,
+h2 {
+    text-wrap: balance;
+}
+
+h1 {
+    font-size: clamp(1.125rem, 5vw, 2.25rem);
+    line-height: 1.1;
+    color: $color-primary;
+}
+
+h2 {
+    font-size: clamp(1rem, 4vw, 1.5rem);
+    line-height: 1.2;
+    color: $color-neutral-900;
+}
+
+/* List and Link Styles */
+ul[class] {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+a[class] {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Image and SVG Styles */
+img,
+svg {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+    font-style: italic;
+    background-repeat: no-repeat;
+    background-size: cover;
+    shape-margin: 1rem;
+}
+
+/* Container Styles */
+.container {
+    width: min(calc(100% - 2.5rem), 1240px);
+    margin-inline: auto;
+}
+
+/* Screen Reader Only Styles */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
